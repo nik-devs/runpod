@@ -19,41 +19,56 @@ PIP_PACKAGES=(
 )
 
 EXTENSIONS=(
-    "https://github.com/deforum-art/sd-webui-deforum"
-    "https://github.com/adieyal/sd-dynamic-prompts"
-    "https://github.com/ototadana/sd-face-editor"
-    "https://github.com/AlUlkesh/stable-diffusion-webui-images-browser"
-    "https://github.com/hako-mikan/sd-webui-regional-prompter"
-    "https://github.com/Coyote-A/ultimate-upscale-for-automatic1111"
+    # "https://github.com/deforum-art/sd-webui-deforum"
+    # "https://github.com/adieyal/sd-dynamic-prompts"
+    # "https://github.com/ototadana/sd-face-editor"
+    # "https://github.com/AlUlkesh/stable-diffusion-webui-images-browser"
+    # "https://github.com/hako-mikan/sd-webui-regional-prompter"
+    # "https://github.com/Coyote-A/ultimate-upscale-for-automatic1111"
+    "https://github.com/DominikDoom/a1111-sd-webui-tagcomplete"
 )
 
 CHECKPOINT_MODELS=(
     #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
-    "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
-    "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
+    # "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
+    # "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/resolve/main/sd_xl_refiner_1.0.safetensors"
+    "https://huggingface.co/LyliaEngine/Pony_Diffusion_V6_XL/resolve/main/ponyDiffusionV6XL_v6StartWithThisOne.safetensors"
 )
 
 LORA_MODELS=(
     #"https://civitai.com/api/download/models/16576"
+    # BASE
+    "https://civitai.com/api/download/models/135867" # Detail Tweaker XL | add-detail-xl | https://civitai.com/models/122359/detail-tweaker-xl
+    # STYLES
+    "https://civitai.com/api/download/models/399313" # Zankuro (Artist Style) Pony | https://civitai.com/models/185558/zankuro-artist-style-flux-and-pony-and-sd15
+    "https://civitai.com/api/download/models/653473" # Hentai Comic Random Generator | FComic_1to1000_Pony_V1 | https://civitai.com/models/585589/hentai-comic-random-generator-full-color-pony-xl-or
+    "https://civitai.com/api/download/models/382152" # ExpressiveH | https://civitai.com/models/341353/expressiveh-hentai-lora-style?modelVersionId=382152
+    "https://civitai.com/api/download/models/436219" # Incase Style [PonyXL] | incase_style_v3-1_ponyxl_ilff | https://civitai.com/models/300005/incase-style-ponyxl
+    "https://civitai.com/api/download/models/479629" # NoctFlatStyle V2 | https://civitai.com/models/395523?modelVersionId=479629
+    "https://civitai.com/api/download/models/244808" # All Disney Princess XL | princess_xl_v2 | https://civitai.com/models/212532/all-disney-princess-xl-lora-model-from-ralph-breaks-the-internet
+    "https://civitai.com/api/download/models/333607" # Smooth Anime 2 Style | Styles for Pony Diffusion V6 XL | https://civitai.com/models/264290?modelVersionId=333607
+    # CHARACTERS
+    "https://civitai.com/api/download/models/585966" # Fenrys (Anime Cheater from Lv2) | https://civitai.com/models/527389/lv2-kara-cheat-datta-motoyuusha-kouho-no-mattari-isekai-life-or-fenrys-pdxl
 )
 
 VAE_MODELS=(
     #"https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors"
     #"https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
-    "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
+    # "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
+    "https://huggingface.co/LyliaEngine/Pony_Diffusion_V6_XL/resolve/main/sdxl_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
-    "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
+    # "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
     "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
-    "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
+    # "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
 )
 
 CONTROLNET_MODELS=(
-    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
-    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors?download"
-    "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_openpose.safetensors"
+    # "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_canny_mid.safetensors"
+    # "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/diffusers_xl_depth_mid.safetensors?download"
+    # "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/t2i-adapter_diffusers_xl_openpose.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_hed-fp16.safetensors"
