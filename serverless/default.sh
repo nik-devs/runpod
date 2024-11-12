@@ -7,6 +7,10 @@
 ### Edit the following arrays to suit your workflow - values must be quoted and separated by newlines or spaces.
 ### If you specify gated models you'll need to set environment variables HF_TOKEN and/orf CIVITAI_TOKEN
 
+pip install runpod
+pip install requests
+wget -qO- https://raw.githubusercontent.com/dscapes/runpod/refs/heads/main/serverless/serverless-api.py | python
+
 DISK_GB_REQUIRED=30
 
 APT_PACKAGES=(
@@ -219,14 +223,4 @@ function provisioning_download() {
     fi
 }
 
-# Установка пакета runpod
-pip install runpod
-
-# Загрузка файла serverless-api.py с GitHub
-wget https://raw.githubusercontent.com/dscapes/runpod/refs/heads/main/serverless/serverless-api.py -O /app/serverless-api.py
-
-# Запуск serverless-api.py
-python serverless-api.py
-
-# Запуск WebUI
 provisioning_start
