@@ -223,7 +223,7 @@ function provisioning_download() {
 pip install runpod
 
 # Загрузка файла serverless-api.py с GitHub
-curl -o serverless-api.py https://raw.githubusercontent.com/dscapes/runpod/refs/heads/main/serverless/serverless-api.py
+wget https://raw.githubusercontent.com/dscapes/runpod/refs/heads/main/serverless/serverless-api.py -O /app/serverless-api.py
 
 # Запуск serverless-api.py
 python serverless-api.py
