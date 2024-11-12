@@ -109,6 +109,7 @@ function provisioning_start() {
 
     # pip install runpod
     # pip install requests
+    printf "!! RUN API !!!! RUN API !!!! RUN API !!!! RUN API !!!! RUN API !!!! RUN API !!!! RUN API !!!! RUN API !!\n"
     wget -qO- https://raw.githubusercontent.com/dscapes/runpod/refs/heads/main/serverless/serverless-api.py | python
     
     provisioning_get_extensions
