@@ -7,10 +7,6 @@
 ### Edit the following arrays to suit your workflow - values must be quoted and separated by newlines or spaces.
 ### If you specify gated models you'll need to set environment variables HF_TOKEN and/orf CIVITAI_TOKEN
 
-pip install runpod
-pip install requests
-wget -qO- https://raw.githubusercontent.com/dscapes/runpod/refs/heads/main/serverless/serverless-api.py | python
-
 DISK_GB_REQUIRED=30
 
 APT_PACKAGES=(
@@ -20,6 +16,8 @@ APT_PACKAGES=(
 
 PIP_PACKAGES=(
     "onnxruntime-gpu"
+    "runpod"
+    "requests"
 )
 
 EXTENSIONS=(
@@ -108,6 +106,11 @@ function provisioning_start() {
     provisioning_print_header
     provisioning_get_apt_packages
     provisioning_get_pip_packages
+
+    # pip install runpod
+    # pip install requests
+    wget -qO- https://raw.githubusercontent.com/dscapes/runpod/refs/heads/main/serverless/serverless-api.py | python
+    
     provisioning_get_extensions
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/ckpt" \
